@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="card text-center" *ngIf="hero$ | async as hero">
+    <h3 class="card-header">"{{ hero.name }}"</h3>
+    <div class="card-body">
+      <div>
+        <span>Id: </span>
+        {{ hero.id }}
+      </div>
+      <div>
+        <label>Name: </label>
+        <input [(ngModel)]="hero.name" placeholder="name"/>
+      </div>
+      <div>
+        <button type="button" class="btn btn-primary btn-sm btn-block" (click)="gotoHeroes(hero)">Back</button>
+      </div>
+    </div>
+  </div>
+</div>

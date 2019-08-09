@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="card">
+    <h3 class="card-header">Heroes</h3>    
+    <li class="list-group" *ngFor="let hero of heroes$ | async">
+      <a class="list-group-item list-group-item-action flex-column align-items-start" [routerLink]="['/hero', hero.id]">
+        <span class="badge badge-primary">{{ hero.id }}</span>
+        {{ hero.name }}
+      </a>
+    </li>
+  </div>
+</div>

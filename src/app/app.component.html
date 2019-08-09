@@ -1,6 +1,18 @@
-<h1>Angular Router</h1>
-<nav>
-  <a routerLink="/crisis-center" routerLinkActive="active" class="btn btn-outline-secondary" href="#">Crisis Center</a>
-  <a routerLink="/heroes" routerLinkActive="active" class="btn btn-outline-secondary" href="#">Heroes</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="../assets/huskyLOGO.svg" width="100" height="40" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="navbar-nav mr-auto">
+      <a class="nav-item nav-link" routerLink="/heroes" routerLinkActive="active" href="#">Heroes</a>
+      <a class="nav-item nav-link" routerLink="/crisis-center" routerLinkActive="active" href="#">Crisis Center</a>
+    </div>
+  </div>
 </nav>
-<router-outlet></router-outlet>
+<div [@routeAnimation]="getAnimationData(routerOutlet)">
+  <router-outlet #routerOutlet="outlet"></router-outlet>
+</div>
+
